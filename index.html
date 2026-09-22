@@ -1,0 +1,1082 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>スピーキングのための英文法</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<style>
+  :root{
+    --paper:#F2F5FA;
+    --panel:#FFFFFF;
+    --panel-2:#F7F9FC;
+    --ink:#1A2233;
+    --ink-2:#4B5872;
+    --ink-3:#7D8AA4;
+    --rule:#D2DAE7;
+    --rule-soft:#E3E9F2;
+    --red:#BE3527;
+    --red-ink:#A82D20;
+    --red-soft:#FAEAE7;
+    --on-red:#FFFFFF;
+    --pos-n:#215FA6;
+    --pos-v:#136B52;
+    --pos-adj:#9A6115;
+    --pos-adv:#6F46A0;
+    --shadow:0 1px 0 rgba(26,34,51,.04), 0 8px 24px -16px rgba(26,34,51,.35);
+
+    --jp:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic",system-ui,sans-serif;
+    --mincho:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+    --en:"Source Serif 4",Georgia,"Times New Roman",serif;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#0F151E;
+      --panel:#18212F;
+      --panel-2:#141C28;
+      --ink:#E8EDF5;
+      --ink-2:#AFBCD1;
+      --ink-3:#7E8DA6;
+      --rule:#2C3A4D;
+      --rule-soft:#232F3F;
+      --red:#F0897B;
+      --red-ink:#F5A69A;
+      --red-soft:#37211E;
+      --on-red:#170D0B;
+      --pos-n:#74ADEC;
+      --pos-v:#5DC7A3;
+      --pos-adj:#E3B066;
+      --pos-adv:#B993E4;
+      --shadow:0 1px 0 rgba(0,0,0,.2), 0 10px 26px -18px rgba(0,0,0,.9);
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#0F151E;
+    --panel:#18212F;
+    --panel-2:#141C28;
+    --ink:#E8EDF5;
+    --ink-2:#AFBCD1;
+    --ink-3:#7E8DA6;
+    --rule:#2C3A4D;
+    --rule-soft:#232F3F;
+    --red:#F0897B;
+    --red-ink:#F5A69A;
+    --red-soft:#37211E;
+    --on-red:#170D0B;
+    --pos-n:#74ADEC;
+    --pos-v:#5DC7A3;
+    --pos-adj:#E3B066;
+    --pos-adv:#B993E4;
+    --shadow:0 1px 0 rgba(0,0,0,.2), 0 10px 26px -18px rgba(0,0,0,.9);
+  }
+
+  *{box-sizing:border-box}
+  [hidden]{display:none !important}
+  .en{font-family:var(--en)}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--jp);
+    font-size:15px;
+    line-height:1.85;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{
+    max-width:1120px;
+    margin:0 auto;
+    padding-inline:20px;
+    padding-block:0 64px;
+  }
+
+  /* ---------- masthead ---------- */
+  header.masthead{padding-block:44px 0}
+  h1{
+    font-family:var(--mincho);
+    font-weight:600;
+    font-size:clamp(15px,2vw,18px);
+    line-height:1.5;
+    margin:0 0 16px;
+    letter-spacing:.12em;
+    color:var(--ink-2);
+  }
+  .sub{
+    margin:0 auto;
+    display:flex;align-items:center;justify-content:center;gap:18px;
+    max-width:900px;
+  }
+  .sub::before,.sub::after{
+    content:"";flex:1 1 0;min-width:10px;height:1px;
+    background:linear-gradient(to right,transparent,var(--rule),transparent);
+  }
+  .sub b{
+    font-family:var(--mincho);
+    font-weight:600;
+    font-size:clamp(25px,4.4vw,40px);
+    line-height:1.25;
+    letter-spacing:.04em;
+    color:var(--red);
+    text-align:center;
+    padding-bottom:10px;
+    border-bottom:2px solid var(--red);
+    text-wrap:balance;
+  }
+  @media (max-width: 640px){
+    .sub{gap:10px}
+    .sub b{letter-spacing:.02em}
+  }
+
+  /* ---------- Book tabs ---------- */
+  .books{
+    display:flex;gap:4px;flex-wrap:wrap;
+    margin-top:20px;
+  }
+  .book-btn{
+    background:var(--panel-2);border:1px solid var(--rule);padding:10px 20px;
+    font-family:var(--en);font-weight:600;font-size:15px;color:var(--ink-2);
+    border-radius:4px;cursor:pointer;
+  }
+  .book-btn:hover{background:var(--panel);color:var(--ink)}
+  .book-btn[aria-selected="true"]{
+    background:var(--red);border-color:var(--red);color:var(--on-red);
+  }
+
+  /* ---------- chapter / lesson selector ---------- */
+  .chapters{
+    display:flex;gap:4px;flex-wrap:wrap;
+    margin-top:20px;
+    border-bottom:1px solid var(--rule);
+  }
+  .chap{
+    background:none;border:0;padding:9px 14px 10px;
+    font-family:var(--jp);font-size:13.5px;color:var(--ink-3);
+    border-bottom:2px solid transparent;margin-bottom:-1px;
+    display:flex;align-items:baseline;gap:9px;
+  }
+  .chap b{font-weight:700;letter-spacing:.04em}
+  .chap i{font-style:normal;font-family:var(--en);font-size:11.5px;opacity:.75;font-variant-numeric:tabular-nums}
+  .chap:hover{color:var(--ink-2)}
+  .chap[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--red)}
+  .chap[aria-selected="true"] b{color:var(--red)}
+
+  .chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px}
+  .chip-l{
+    font-family:var(--en);font-size:13px;font-weight:600;
+    font-variant-numeric:tabular-nums;
+    padding:5px 11px 6px;
+    border:1px solid var(--rule);
+    background:var(--panel);
+    color:var(--ink-2);
+    display:inline-flex;align-items:center;gap:6px;
+  }
+  .chip-l:hover{border-color:var(--ink-3);color:var(--ink)}
+  .chip-l[aria-selected="true"]{
+    background:var(--red);border-color:var(--red);color:var(--on-red);
+  }
+  .chip-l .dot{
+    width:5px;height:5px;border-radius:99px;background:var(--red);
+    display:none;
+  }
+  .chip-l.seen .dot{display:block}
+  .chip-l[aria-selected="true"] .dot{background:var(--on-red)}
+
+  .lesson-head{
+    display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;
+    margin-top:22px;padding-bottom:10px;
+    border-bottom:1px solid var(--rule);
+  }
+  .lesson-head .no{
+    font-family:var(--en);font-weight:600;font-size:13px;
+    letter-spacing:.1em;color:var(--red);text-transform:uppercase;
+    font-variant-numeric:tabular-nums;
+  }
+  .lesson-head .name{
+    font-family:var(--mincho);font-weight:600;
+    font-size:clamp(18px,2.6vw,24px);letter-spacing:.03em;
+  }
+
+  /* ---------- contents ---------- */
+  .contents{margin-top:26px}
+  .contents h2, .legend h2{
+    font-size:11.5px;letter-spacing:.18em;font-weight:700;
+    color:var(--ink-3);margin:0 0 10px;
+  }
+  .topics{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(215px,1fr));
+    gap:1px;
+    background:var(--panel);
+    border:1px solid var(--rule);
+    border-radius:3px;
+    overflow:hidden;
+  }
+  .topic{
+    background:var(--panel);
+    outline:1px solid var(--rule);
+    padding:11px 14px;
+    display:flex;align-items:baseline;gap:10px;
+    font-size:13.5px;
+  }
+  .topic b{
+    font-family:var(--en);font-weight:600;color:var(--ink-3);
+    font-size:12px;font-variant-numeric:tabular-nums;
+  }
+  .topic i{
+    font-style:normal;color:var(--ink-3);font-family:var(--en);font-size:12.5px;
+    display:block;
+  }
+
+  /* ---------- toolbar ---------- */
+  .toolbar{
+    position:sticky;
+    top:env(safe-area-inset-top, 0px);
+    z-index:5;
+    margin-top:26px;
+    display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+    padding:12px 0;
+    background:var(--paper);
+    border-bottom:1px solid var(--rule);
+  }
+  .count{font-size:13px;color:var(--ink-2);font-variant-numeric:tabular-nums;letter-spacing:.03em}
+  .count b{color:var(--red);font-family:var(--en);font-size:17px;font-weight:600}
+  .track{flex:1 1 140px;min-width:120px;height:4px;border-radius:99px;background:var(--rule-soft);overflow:hidden}
+  .track span{display:block;height:100%;width:0;background:var(--red);transition:width .25s ease}
+  .tools{display:flex;gap:8px;margin-left:auto}
+  button{
+    font-family:var(--jp);font-size:13px;cursor:pointer;border-radius:3px;
+    transition:background .15s ease,border-color .15s ease,color .15s ease;
+  }
+  .ghost{background:transparent;border:1px solid var(--rule);color:var(--ink-2);padding:6px 12px}
+  .ghost:hover{border-color:var(--ink-3);color:var(--ink)}
+  :focus-visible{outline:2px solid var(--red);outline-offset:2px}
+
+  /* ---------- items ---------- */
+  .items{display:flex;flex-direction:column;gap:14px;margin-top:22px}
+  .items .items{margin-top:0}
+  .lesson{display:contents}
+  .item{
+    display:grid;
+    grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);
+    background:var(--panel);
+    border:1px solid var(--rule);
+    border-radius:4px;
+    box-shadow:var(--shadow);
+    overflow:hidden;
+  }
+  .q{padding:20px 22px 18px;display:flex;flex-direction:column;gap:14px}
+  .q-head{display:flex;align-items:center;gap:10px}
+  .num{
+    font-family:var(--en);font-weight:600;font-size:13px;
+    font-variant-numeric:tabular-nums;
+    width:24px;height:24px;flex:none;
+    display:grid;place-items:center;
+    border:1px solid var(--rule);border-radius:99px;
+    color:var(--ink-2);
+  }
+  .item.done .num{border-color:var(--red);color:var(--red)}
+  .sec{font-size:11.5px;letter-spacing:.1em;color:var(--ink-3)}
+  .prompt{margin:0;font-size:14.5px;line-height:1.95}
+  .blank{
+    display:inline-block;min-width:4.6em;
+    border-bottom:1px solid var(--ink-3);
+    margin:0 .25em;vertical-align:baseline;
+  }
+  .ex .blank{min-width:6.5em;border-bottom-color:var(--ink-2);margin-left:0}
+  .prompt .pick{
+    color:var(--ink);background:var(--panel-2);
+    border:1px solid var(--rule-soft);border-radius:2px;
+    padding:1px 6px;font-size:13.5px;white-space:nowrap;
+  }
+  .ex{
+    margin:0;padding:12px 14px;
+    background:var(--panel-2);
+    border-left:2px solid var(--rule);
+    display:flex;flex-direction:column;gap:5px;
+  }
+  .ex p{margin:0;font-family:var(--en);font-size:16px;line-height:1.6}
+  .ex .tag{font-family:var(--jp);font-size:12px;color:var(--ink-3);margin-right:.5em}
+  .ex .jp{font-family:var(--jp);font-size:13px;color:var(--ink-2)}
+  .reveal{
+    align-self:flex-start;margin-top:auto;
+    background:var(--red);border:1px solid var(--red);color:var(--on-red);
+    padding:8px 18px;font-weight:600;letter-spacing:.06em;
+  }
+  .reveal:hover{filter:brightness(1.06)}
+  .item.done .reveal{background:transparent;color:var(--red);border-color:var(--rule)}
+
+  /* ---------- answer ---------- */
+  .a{
+    border-left:1px solid var(--rule);
+    background:var(--panel-2);
+    padding:20px 22px;
+    display:flex;flex-direction:column;
+  }
+  .placeholder{
+    flex:1;display:grid;place-items:center;
+    border:1px dashed var(--rule);border-radius:3px;
+    min-height:104px;
+    color:var(--ink-3);font-size:12.5px;letter-spacing:.08em;
+    background:repeating-linear-gradient(135deg, transparent 0 9px, var(--rule-soft) 9px 10px);
+  }
+  .answer{animation:rise .22s ease both}
+  @keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion: reduce){
+    .answer{animation:none}
+    .track span{transition:none}
+  }
+  .a-label{
+    display:flex;align-items:center;gap:8px;
+    font-size:11.5px;letter-spacing:.2em;font-weight:700;
+    color:var(--red);margin:0 0 12px;font-family:var(--en);
+  }
+  .a-label::after{content:"";flex:1;height:1px;background:var(--red);opacity:.3}
+  .rows{display:flex;flex-direction:column;gap:9px;margin:0}
+  .row{display:grid;grid-template-columns:minmax(0,auto) minmax(0,1fr);gap:4px 14px;align-items:baseline}
+  .row dt{font-size:12.5px;color:var(--ink-3)}
+  .row dd{margin:0;font-size:15px;color:var(--red-ink);font-weight:500}
+  .row dd .en{font-family:var(--en);font-size:16.5px;font-weight:600}
+  .note{
+    margin:14px 0 0;padding-top:12px;
+    border-top:1px solid var(--rule);
+    font-size:12.5px;line-height:1.8;color:var(--ink-2);
+  }
+  .pos{border-bottom:2px solid currentColor;padding-bottom:1px;font-family:var(--en);font-weight:600}
+  .n{color:var(--pos-n)} .v{color:var(--pos-v)}
+  .adj{color:var(--pos-adj)} .adv{color:var(--pos-adv)}
+  .chip{
+    display:inline-block;font-family:var(--jp);font-size:11px;font-weight:700;
+    letter-spacing:.06em;padding:1px 7px;border-radius:2px;
+    border:1px solid currentColor;margin-left:8px;vertical-align:2px;
+  }
+
+  /* ---------- legend ---------- */
+  .legend{margin-top:34px;padding-top:22px;border-top:1px solid var(--rule)}
+  .keys{display:flex;flex-wrap:wrap;gap:8px 20px;margin:0;padding:0;list-style:none;font-size:13px}
+  .keys li{display:flex;align-items:baseline;gap:8px;color:var(--ink-2)}
+  .keys .sw{width:16px;height:3px;border-radius:99px;display:inline-block;flex:none}
+  footer{margin-top:26px;font-size:12px;color:var(--ink-3);letter-spacing:.04em}
+
+  @media (max-width: 760px){
+    .item{grid-template-columns:1fr}
+    .a{border-left:0;border-top:1px solid var(--rule)}
+    .reveal{width:100%;text-align:center}
+    .placeholder{min-height:70px}
+    .tabs{gap:18px}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="masthead">
+    <h1>文法理解度チェックアプリ</h1>
+    <!-- ユーザーの要望通り、タイトルは「スピーキングのための英文法」のみに固定 -->
+    <p class="sub"><b id="mainTitle">スピーキングのための英文法</b></p>
+    
+    <nav class="books" id="books" role="tablist" aria-label="Book"></nav>
+    <nav class="chapters" id="chapters" role="tablist" aria-label="章"></nav>
+    <div class="chips" id="chips" role="tablist" aria-label="レッスン"></div>
+  </header>
+
+  <div class="lesson-head">
+    <span class="no" id="lessonNo"></span>
+    <span class="name" id="lessonName"></span>
+  </div>
+
+  <div class="contents">
+    <h2>このレッスンで確認する働き</h2>
+    <div class="topics" id="topics"></div>
+  </div>
+
+  <div class="toolbar">
+    <span class="count"><b id="done">0</b> / <span id="total">0</span> 問 確認済み</span>
+    <span class="track"><span id="bar"></span></span>
+    <span class="tools">
+      <button class="ghost" id="showAll" type="button">すべて表示</button>
+      <button class="ghost" id="hideAll" type="button">すべて隠す</button>
+    </span>
+  </div>
+
+  <main class="items" id="items"></main>
+
+  <section class="legend">
+    <h2>答えの下線の色</h2>
+    <ul class="keys">
+      <li><span class="sw" style="background:var(--pos-n)"></span>名詞・代名詞（主語になる語）</li>
+      <li><span class="sw" style="background:var(--pos-v)"></span>動詞（述部の中心）</li>
+      <li><span class="sw" style="background:var(--pos-adj)"></span>形容詞（名詞を修飾）</li>
+      <li><span class="sw" style="background:var(--pos-adv)"></span>副詞・副詞句（動詞や形容詞を修飾）</li>
+    </ul>
+    <footer>ボタンを押すと、その設問の答えだけが右側に表示されます。</footer>
+  </section>
+</div>
+
+<script>
+// ==========================================
+// 全データ (Lesson 1 〜 Lesson 4)
+// ==========================================
+
+const DATA_L1 = {
+  title: "Lesson 1",
+  chapters: [
+    { no: "1",  disp: "Lesson 0-2",  name: "あいさつ表現" },
+    { no: "2",  disp: "Lesson 1-1",  name: "文の要素と品詞" },
+    { no: "3",  disp: "Lesson 1-2",  name: "指示代名詞・形容詞" },
+    { no: "4",  disp: "Lesson 1-3",  name: "一般動詞と命令形" },
+    { no: "5",  disp: "Lesson 1-4",  name: "名詞（可算・不可算）" },
+    { no: "6",  disp: "Lesson 1-5",  name: "疑問代名詞・固有名詞・前置詞①" },
+    { no: "7",  disp: "Lesson 1-6",  name: "疑問形容詞・前置詞②・接続詞" },
+    { no: "8",  disp: "Lesson 1-7",  name: "疑問副詞・前置詞③・集合名詞" },
+    { no: "9",  disp: "Lesson 1-8",  name: "前置詞④・所有代名詞・間投詞" },
+    { no: "10", disp: "Lesson 1-9",  name: "状態動詞・進行形" },
+    { no: "11", disp: "Lesson 1-10", name: "be 動詞の過去形・it・同格" },
+    { no: "12", disp: "Lesson 1-11", name: "過去形・can / could・所有格" }
+  ],
+  lessons: [
+    {
+      id:"1-1",
+      label:"Hello / How are you?",
+      topics:[
+        "Hello・Hi は朝昼夜すべてに使える",
+        "電話の「もしもし」も Hello",
+        "How are you? と「お元気ですか？」の違い",
+        "How are you? への決まった答え方"
+      ],
+      items:[
+        {
+          sec:"1. Hello. / Hi.",
+          prompt:'下の英語を日本語に、日本語を英語に訳しなさい。',
+          ex:[
+            {t:"(1)", s:'Hello! / Hi!（<span class="blank"></span>／<span class="blank"></span>／<span class="blank"></span>）（３種類）', j:"日本語に訳す"},
+            {t:"(2)", s:'(<span class="blank"></span>), Tom!', j:"やあ、トム！"},
+            {t:"(3)", s:'(<span class="blank"></span>)', j:"（電話に出て）もしもし"}
+          ],
+          rows:[
+            ["(1)", '「おはよう」／「こんにちは」／「こんばんは」'],
+            ["(2)", '<span class="en">Hi</span>, Tom!'],
+            ["(3)", '<span class="en">Hello?</span>']
+          ],
+          note:'日本語は時間帯で挨拶を使い分けるが、<span class="en">Hello / Hi</span> は一日中使える。<span class="en">Hey</span> は親しい間柄向け。'
+        }
+      ]
+    },
+    {
+      id:"2-1",
+      label:"1. 文：主語と述語／2. 名詞・代名詞",
+      topics:[
+        "文＝主語＋述語",
+        "主語になるのは名詞",
+        "代名詞は名詞の代わり",
+        "Tom is in the room. の構造"
+      ],
+      items:[
+        {
+          sec:"1. 文：主語と述語",
+          prompt:'下の説明文の（　）に適切な語句を書きなさい。',
+          ex:[
+            {t:"1", s:'「文」は、主語と主語の状態や動作について述べる述語に分けられる。下の英文だと、主語が（<span class="blank"></span>）で、述語が（<span class="blank"></span>）。<br>Tom is in the room.', j:""}
+          ],
+          rows:[
+            ["1", '主語＝<span class="en">Tom</span>／述語＝<span class="en">is in the room</span>']
+          ],
+          note:'英語の文は「誰が・何が」＋「どうである・どうする」の 2 つの部分に分かれる。'
+        }
+      ]
+    }
+  ]
+};
+
+const DATA_L2 = {
+  title: "Lesson 2",
+  chapters: [
+    { no: "1", disp: "Lesson 2-1", name: "法助動詞#2,3・未来・再帰代名詞" },
+    { no: "2", disp: "Lesson 2-2", name: "その他の疑問文・法助動詞#4・第4文型" },
+    { no: "3", disp: "Lesson 2-3", name: "不定詞・第2文型・存在文・第5文型" },
+    { no: "4", disp: "Lesson 2-4", name: "動名詞・不定詞との比較・等位接続詞" },
+    { no: "5", disp: "Lesson 2-5", name: "受動態・分詞" },
+    { no: "6", disp: "Lesson 2-6", name: "名詞節を導く接続詞・比較" },
+    { no: "7", disp: "Lesson 2-7", name: "副詞節を導く接続詞・前置詞の有無" }
+  ],
+  lessons: [
+    {
+      id:"1-1",
+      label:"1. 法助動詞#2: may, might",
+      topics:[
+        "may と can の許可の違い（状況か話者か）",
+        "May I ~? と Can I ~? の丁寧さの比較",
+        "推量の may / might（かもしれない）",
+        "might は may より曖昧な響きを添える"
+      ],
+      items:[
+        {
+          sec:"1. may, might",
+          prompt:'下の（　）に適切な語句を書きなさい。',
+          ex:[
+            {t:"1", s:'You (<span class="blank"></span>) there now.', j:"今そこに行ってもいいよ"},
+            {t:"2", s:'You (<span class="blank"></span>) in front of my house.', j:"私の家の前に(車を) 止めていいよ"}
+          ],
+          rows:[
+            ["1", 'You <span class="en">may go</span> there now.'],
+            ["2", 'You <span class="en">may park</span> in front of my house.']
+          ]
+        },
+        {
+          sec:"1. may と can の違い",
+          prompt:'下の（　）に適切な語句を書きなさい。',
+          ex:[
+            {t:"説明", s:'「許可」のmayは、同じく「許可」のcanと意味的に似ているが、この2つの比較では（<span class="blank"></span>）の方が形式ばっている。You may go there now. と You can go there now.の違いは、mayのあるセンテンスは“（<span class="blank"></span>）が与える許可”で、canのあるセンテンスは“（<span class="blank"></span>）が与える許可”。ということは（<span class="blank"></span>）のある方が押し付けがましくなり、（<span class="blank"></span>）の場合よりはきついニュアンスがある。', j:""}
+          ],
+          rows:[
+            ["説明", '<b>may</b> の方が形式ばっている／mayは“<b>状況（規則など）</b>”が与える許可／canは“<b>話者自身</b>”が与える許可／<b>can</b> のある方が押し付けがましくなり、<b>may</b> の場合よりきついニュアンスがある']
+          ],
+          note:'mayは規則や客観的な状況に基づく許可、canは話し手の権限での許可という違いがあります。'
+        }
+      ]
+    },
+    {
+      id:"2-1",
+      label:"1. その他の疑問文",
+      topics:[
+        "否定疑問文（〜じゃないの？）",
+        "付加疑問文（〜だよね？）",
+        "選択疑問文（AかBか）"
+      ],
+      items:[
+        {
+          sec:"1. その他の疑問文 (否定・付加・選択)",
+          prompt:'下の（　）に適切な語句を書きなさい。',
+          ex:[
+            {t:"1", s:'(<span class="blank"></span>) you about it?', j:"それについて君に言わなかったっけ? (言ったよね)"},
+            {t:"2", s:'(<span class="blank"></span>) a car?', j:"サリーは車を運転できないの? (意外な驚き)"}
+          ],
+          rows:[
+            ["1", '<span class=\"en\">Didn\'t I tell</span> you about it?'],
+            ["2", '<span class=\"en\">Can\'t Sally drive</span> a car?']
+          ],
+          note:'付加疑問文は、肯定文には否定の付加疑問を、否定文には肯定の付加疑問をつけます。'
+        }
+      ]
+    }
+  ]
+};
+
+const DATA_L3 = {
+  title: "Lesson 3",
+  chapters: [
+    { no: "1", disp: "Lesson 3-1", name: "現在完了形・関係代名詞の基本" },
+    { no: "2", disp: "Lesson 3-2", name: "時制の比較・疑問文・疑問詞+不定詞" },
+    { no: "3", disp: "Lesson 3-3", name: "代名詞の注意点" },
+    { no: "4", disp: "Lesson 3-4", name: "many/much・few/little・不定詞構文" },
+    { no: "5", disp: "Lesson 3-5", name: "その他の前置詞・他動詞・used to" },
+    { no: "6", disp: "Lesson 3-6", name: "原形不定詞・使役/感覚動詞・in/on" }
+  ],
+  lessons: [
+    {
+      id:"1-1",
+      label:"1. 完了形#1: 現在完了形",
+      topics:[
+        "「完了」の完了形",
+        "「継続」の完了形",
+        "「経験」の完了形",
+        "完了形の注意点"
+      ],
+      items:[
+        {
+          sec:"1. 現在完了形とは",
+          prompt:'下の（　）に適切な語句を書きなさい。',
+          ex:[
+            {t:"説明", s:'現在完了形は、“（<span class="blank"></span>）の影響を（<span class="blank"></span>）持っている”時に使われる。', j:""},
+            {t:"A", s:'I have finished my homework.', j:""},
+            {t:"B", s:'I finished my homework.', j:""},
+            {t:"説明", s:'AとBの違い（<span class="blank"></span>）', j:""}
+          ],
+          rows:[
+            ["説明", '<b>過去</b>の影響を<b>今</b>持っている'],
+            ["A/B違い", 'Aは「宿題を終わらせて、<b>今もう自由だ（または結果が手元にある）</b>」という今の状態に焦点がある。Bは単なる「<b>過去の事実</b>」のみ。']
+          ],
+          note:'現在完了形は常に「現在」とのつながりを意識する時制です。'
+        }
+      ]
+    },
+    {
+      id:"1-2",
+      label:"2. 従位接続詞#3: 関係代名詞の基本",
+      topics:[
+        "関係代名詞の限定用法 vs 非限定用法",
+        "who (人)",
+        "which (物)",
+        "that (人・物)"
+      ],
+      items:[
+        {
+          sec:"2. 関係代名詞 who, which, that",
+          prompt:'下の（　）に適切な語句を書きなさい。',
+          ex:[
+            {t:"29", s:'This is the PC (<span class="blank"></span>) he bought yesterday.', j:"これは彼が昨日買ったPCです"},
+            {t:"30", s:'I have an aunt (<span class="blank"></span>) plays the piano very well.', j:"私にはピアノが非常に上手な叔母がいる"}
+          ],
+          rows:[
+            ["29", 'This is the PC <span class="en">that</span> he bought yesterday.'],
+            ["30", 'I have an aunt <span class="en">who</span> plays the piano very well.']
+          ]
+        }
+      ]
+    }
+  ]
+};
+
+const DATA_L4 = {
+  title: "Lesson 4",
+  chapters: [
+    { no: "0", disp: "Lesson 4-0", name: "中学英語の総復習" },
+    { no: "1", disp: "Lesson 4-1", name: "関係副詞・関係形容詞など" },
+    { no: "2", disp: "Lesson 4-2", name: "仮定法・句動詞など" },
+    { no: "3", disp: "Lesson 4-3", name: "if以外の条件文・分詞構文など" },
+    { no: "4", disp: "Lesson 4-4", name: "複合関係詞・不定詞/動名詞の慣用表現など" },
+    { no: "5", disp: "Lesson 4-5", name: "命令形・否定表現の注意点" },
+    { no: "6", disp: "Lesson 4-6", name: "不定詞のその他・中間の態など" },
+    { no: "7", disp: "Lesson 4-7", name: "全否定・倒置など" },
+    { no: "8", disp: "Lesson 4-8", name: "副詞の注意点・疑問詞の慣用表現など" },
+    { no: "9", disp: "Lesson 4-9", name: "部分詞・主要動詞のイディオムなど" }
+  ],
+  lessons: [
+    {
+      id: "0-1",
+      label: "1. 文: 主語と述語",
+      topics: ["名詞・代名詞", "形容詞・限定詞", "副詞・動詞"],
+      items: [
+        {
+          sec: "1. 文: 主語と述語",
+          prompt: "下の（　）に適切な語句を書きなさい。",
+          ex: [
+            {t:"1", s:"文は、（A:<span class=\"blank\"></span>）とAの状態や動作について述べる（B:<span class=\"blank\"></span>）に分けられる。", j:""},
+            {t:"2", s:"主語は（<span class=\"blank\"></span>（品詞））で人、物、事柄などの名前を表す。", j:""}
+          ],
+          rows: [
+            ["1", "A: <b>主語</b> / B: <b>述語</b>"],
+            ["2", "<b>名詞</b>"]
+          ]
+        }
+      ]
+    },
+    {
+      id: "1-1",
+      label: "1. 従位接続詞#3:関係副詞",
+      topics: ["関係副詞について", "where, when, why, how"],
+      items: [
+        {
+          sec: "1. 関係副詞",
+          prompt: "下の（　）に適切な語句を書きなさい。",
+          ex: [
+            {t:"1", s:"This is (<span class=\"blank\"></span>) we played baseball often.", j:"ここが私たちがよく野球をした場所です（2種類）"}
+          ],
+          rows: [
+            ["1", "This is <span class=\"en\">the place where / where</span> we played baseball often."]
+          ]
+        }
+      ]
+    },
+    {
+      id: "2-1",
+      label: "1. 仮定法過去",
+      topics: ["直接法のある条件文", "仮定法のある条件文"],
+      items: [
+        {
+          sec: "1. 直接法と仮定法",
+          prompt: "下の（　）に適切な語句を書きなさい。",
+          ex: [
+            {t:"1", s:"If he (<span class=\"blank\"></span>) money, he (<span class=\"blank\"></span>) go to America to study.", j:"もし彼にお金があれば、アメリカに留学するでしょう"},
+            {t:"2", s:"If he (<span class=\"blank\"></span>) money, he (<span class=\"blank\"></span>) go to America to study.", j:"もし彼にお金があれば、アメリカに留学するんでしょうがね"}
+          ],
+          rows: [
+            ["1", "If he <span class=\"en\">has</span> money, he <span class=\"en\">will</span> go to America to study."],
+            ["2", "If he <span class=\"en\">had</span> money, he <span class=\"en\">would</span> go to America to study."]
+          ]
+        }
+      ]
+    },
+    {
+      id: "3-1",
+      label: "1. if以外の条件文",
+      topics: ["unless", "suppose, supposing", "in case, even if, as if"],
+      items: [
+        {
+          sec: "1. unless",
+          prompt: "下の英文を訳しなさい。",
+          ex: [
+            {t:"1", s:"The event will be held outdoors unless it rains.", j:""}
+          ],
+          rows: [
+            ["1", "雨が降らない限り、そのイベントは外で行われます"]
+          ]
+        }
+      ]
+    },
+    {
+      id: "4-1",
+      label: "1. 複合関係詞",
+      topics: ["what", "whoever, whichever など"],
+      items: [
+        {
+          sec: "1. what / whoever",
+          prompt: "下の（　）に適切な語句を書きなさい。",
+          ex: [
+            {t:"1", s:"(<span class=\"blank\"></span>) is not true.", j:"彼女の言ったことは真実ではありません"},
+            {t:"2", s:"(<span class=\"blank\"></span>) is welcome.", j:"来る人は誰でも歓迎です"}
+          ],
+          rows: [
+            ["1", "<span class=\"en\">What she said</span> is not true."],
+            ["2", "<span class=\"en\">Whoever comes</span> is welcome."]
+          ]
+        }
+      ]
+    },
+    {
+      id: "5-1",
+      label: "1. 命令形の注意点",
+      topics: ["命令形+and/or", "let の注意点"],
+      items: [
+        {
+          sec: "1. 命令形+and/or",
+          prompt: "下の（　）に適切な語句を書きなさい。",
+          ex: [
+            {t:"1", s:"(<span class=\"blank\"></span>), and you can enter a bigger world.", j:"英語を一生懸命勉強しなさい。そうすればより大きな世界に進出できるから"}
+          ],
+          rows: [
+            ["1", "<span class=\"en\">Study English hard</span>, and you can enter a bigger world."]
+          ]
+        }
+      ]
+    },
+    {
+      id: "6-1",
+      label: "1. 不定詞のその他の注意点",
+      topics: ["be+to不定詞", "seem+to不定詞"],
+      items: [
+        {
+          sec: "1. be+to不定詞",
+          prompt: "下の英文を訳しなさい。",
+          ex: [
+            {t:"1", s:"Another meeting is to be held on Friday.", j:""}
+          ],
+          rows: [
+            ["1", "もう一つのミーティングが金曜日に行われる予定です"]
+          ]
+        }
+      ]
+    },
+    {
+      id: "7-1",
+      label: "1. 全否定、部分否定、準否定",
+      topics: ["全否定と部分否定の違い", "準否定(弱い否定)"],
+      items: [
+        {
+          sec: "1. 部分否定",
+          prompt: "下の英文を訳しなさい。",
+          ex: [
+            {t:"1", s:"Not all people share common values.", j:""}
+          ],
+          rows: [
+            ["1", "すべての人たちが共通の価値観を共有しているわけではない"]
+          ]
+        }
+      ]
+    },
+    {
+      id: "8-1",
+      label: "1. 不定詞、動名詞の両方とれる形容詞",
+      topics: ["afraid", "ashamed"],
+      items: [
+        {
+          sec: "1. afraid",
+          prompt: "下の（　）に適切な語句を書きなさい。",
+          ex: [
+            {t:"1", s:"Don't be (<span class=\"blank\"></span>).", j:"ダイブするのを恐れないで"}
+          ],
+          rows: [
+            ["1", "Don't be <span class=\"en\">afraid to dive</span>."]
+          ]
+        }
+      ]
+    },
+    {
+      id: "9-1",
+      label: "1. 部分詞と of 句の注意点",
+      topics: ["部分の数量関係の語"],
+      items: [
+        {
+          sec: "1. of句",
+          prompt: "下の（　）に適切な語句を書きなさい。",
+          ex: [
+            {t:"1", s:"It is important for (<span class=\"blank\"></span>) to stay here.", j:"ここに私たちの一人が残ることは重要です"}
+          ],
+          rows: [
+            ["1", "It is important for <span class=\"en\">one of us</span> to stay here."]
+          ]
+        }
+      ]
+    }
+  ]
+};
+
+// 全データのエクスポート
+const ALL_LESSON_DATA = {
+  L1: DATA_L1,
+  L2: DATA_L2,
+  L3: DATA_L3,
+  L4: DATA_L4
+};
+
+
+// ==========================================
+// UI ロジック
+// ==========================================
+const booksEl = document.getElementById("books");
+const chaptersEl = document.getElementById("chapters");
+const chipsEl = document.getElementById("chips");
+const topicsEl = document.getElementById("topics");
+const lessonNoEl = document.getElementById("lessonNo");
+const lessonNameEl = document.getElementById("lessonName");
+const listEl = document.getElementById("items");
+const doneEl = document.getElementById("done");
+const totalEl = document.getElementById("total");
+const barEl = document.getElementById("bar");
+
+let activeBookId = "L1"; 
+let activeCh = "1";      
+let activeLessonIndex = 0; 
+
+function init() {
+  renderBooks();
+  selectBook("L1");
+}
+
+function renderBooks() {
+  booksEl.innerHTML = Object.keys(ALL_LESSON_DATA).map(key => {
+    return `<button class="book-btn" type="button" role="tab" id="book-${key}" data-id="${key}">${ALL_LESSON_DATA[key].title}</button>`;
+  }).join("");
+}
+
+function selectBook(bookId) {
+  activeBookId = bookId;
+  const data = ALL_LESSON_DATA[bookId];
+
+  // Bookボタンの見た目更新
+  Object.keys(ALL_LESSON_DATA).forEach(key => {
+    document.getElementById(`book-${key}`).setAttribute("aria-selected", String(key === bookId));
+  });
+
+  // Chapterを描画
+  renderChapters(data.chapters, data.lessons);
+  
+  // デフォルトで一番最初の章を選択状態にする
+  if(data.chapters.length > 0) {
+    activeCh = data.chapters[0].no;
+  }
+  
+  // コンテンツを一括生成
+  renderAllLessons(data.lessons);
+  
+  // 現在の章に対応する最初のレッスンを選択
+  const firstLessonInCh = data.lessons.findIndex(L => chapterOf(L.id) === activeCh);
+  if(firstLessonInCh >= 0) {
+    selectLesson(firstLessonInCh);
+  }
+}
+
+function renderChapters(chapters, lessons) {
+  chaptersEl.innerHTML = chapters.map(c => {
+    const n = lessons.filter(L => chapterOf(L.id) === c.no).length;
+    return `<button class="chap" type="button" role="tab" id="chap-${c.no}" data-ch="${c.no}">
+      <b>${c.disp || ("第" + c.no + "章")}</b><span>${c.name}</span><i>${n} lessons</i>
+    </button>`;
+  }).join("");
+}
+
+function renderAllLessons(lessons) {
+  listEl.innerHTML = lessons.map((L, li) => {
+    const itemsHtml = L.items.map((it, i) => {
+      const rows = it.rows.map(r => `<div class="row"><dt>${r[0]}</dt><dd>${r[1]}</dd></div>`).join("");
+      const ex = it.ex.map(e => `<p>${e.t ? '<span class="tag">' + e.t + '</span>' : ''}${e.s}${e.j ? ' <span class="jp">「' + e.j + '」</span>' : ''}</p>`).join("");
+      const k = li + '-' + i;
+      return `
+      <article class="item" id="item-${k}">
+        <div class="q">
+          <div class="q-head"><span class="num">${i + 1}</span><span class="sec">${it.sec}</span></div>
+          <p class="prompt">${it.prompt}</p>
+          <div class="ex">${ex}</div>
+          <button class="reveal" type="button" id="btn-${k}" aria-expanded="false" aria-controls="ans-${k}" data-k="${k}">答えを見る</button>
+        </div>
+        <aside class="a">
+          <div class="placeholder" id="ph-${k}">答えは隠れています</div>
+          <div class="answer" id="ans-${k}" hidden>
+            <p class="a-label">ANSWER</p>
+            <dl class="rows">${rows}</dl>
+            ${it.note ? '<p class="note">' + it.note + '</p>' : ''}
+          </div>
+        </aside>
+      </article>`;
+    }).join("");
+
+    return `<section class="lesson" id="lesson-${li}" hidden><div class="items">${itemsHtml}</div></section>`;
+  }).join("");
+}
+
+function generateSecLabels(lessons) {
+  function tok(s){
+    const m = s.match(/\d+\./);
+    if (!m) return null;
+    const i = s.indexOf(m[0]);
+    let out = "";
+    for (let k = i; k < s.length; k++){
+      const c = s[k];
+      if (/[0-9A-Za-z().\-]/.test(c)) out += c; else break;
+    }
+    return out;
+  }
+  function base(t){ return t.match(/^\d+\./)[0]; }
+  
+  const out = lessons.map(L => {
+    const secs = L.items.map(it => it.sec);
+    if (secs.some(s => /^\s*P\d/.test(s))){
+      const ps = [];
+      secs.forEach(s => { let m; const r = /P(\d+)/g; while ((m = r.exec(s))) ps.push(Number(m[1])); });
+      const a = Math.min.apply(null, ps), b = Math.max.apply(null, ps);
+      return a === b ? "P" + a : "P" + a + "〜P" + b;
+    }
+    const ts = secs.map(tok).filter(Boolean);
+    if (!ts.length) return secs[0].split(/\s+/)[0];
+    const bs = ts.map(t => parseInt(base(t), 10));
+    const mn = Math.min.apply(null, bs), mx = Math.max.apply(null, bs);
+    if (mn !== mx) return mn + ".〜" + mx + ".";
+    const F = ts[0], Lst = ts[ts.length - 1];
+    if (F === Lst) return F;
+    if (Lst.indexOf(F) === 0) return F;
+    if (F.indexOf(Lst) === 0) return Lst;
+    return F + "〜" + Lst.slice(base(F).length);
+  });
+  
+  const marks = ["①","②","③","④","⑤","⑥","⑦","⑧","⑨"];
+  const groups = {};
+  lessons.forEach((L, i) => {
+    const k = chapterOf(L.id) + " " + out[i];
+    (groups[k] = groups[k] || []).push(i);
+  });
+  Object.keys(groups).forEach(k => {
+    const g = groups[k];
+    if (g.length > 1) g.forEach((i, n) => { out[i] = out[i] + (marks[n] || String(n + 1)); });
+  });
+  return out;
+}
+
+function renderChips(lessons) {
+  const labels = generateSecLabels(lessons);
+  chipsEl.innerHTML = lessons.map((L, li) => {
+    if (chapterOf(L.id) !== activeCh) return "";
+    return `<button class="chip-l${lessonDone(li) ? " seen" : ""}" type="button" role="tab" id="chip-${li}" data-l="${li}" aria-selected="${li === activeLessonIndex}" title="${L.label}"><span class="dot"></span>${labels[li]}</button>`;
+  }).join("");
+}
+
+function selectLesson(li) {
+  const lessons = ALL_LESSON_DATA[activeBookId].lessons;
+  activeLessonIndex = li;
+  activeCh = chapterOf(lessons[li].id);
+  
+  lessons.forEach((L, i) => {
+    const el = document.getElementById("lesson-" + i);
+    if(el) el.hidden = (i !== li);
+  });
+  
+  ALL_LESSON_DATA[activeBookId].chapters.forEach(c => {
+    const el = document.getElementById("chap-" + c.no);
+    if(el) el.setAttribute("aria-selected", String(c.no === activeCh));
+  });
+  
+  renderChips(lessons);
+  
+  lessonNoEl.textContent = "";
+  lessonNoEl.style.display = "none";
+  lessonNameEl.textContent = lessons[li].label;
+  topicsEl.innerHTML = lessons[li].topics.map((t, i) => `<div class="topic"><b>${i + 1}</b><span>${t}</span></div>`).join("");
+  
+  tally();
+}
+
+const chapterOf = id => id.split("-")[0];
+
+function setOpen(k, open){
+  const item = document.getElementById("item-" + k);
+  if(!item) return;
+  const btn = document.getElementById("btn-" + k);
+  const ans = document.getElementById("ans-" + k);
+  const ph = document.getElementById("ph-" + k);
+  ans.hidden = !open;
+  ph.hidden = open;
+  btn.textContent = open ? "答えを隠す" : "答えを見る";
+  btn.setAttribute("aria-expanded", String(open));
+  item.classList.toggle("done", open);
+  if (open) { ans.style.animation = "none"; void ans.offsetWidth; ans.style.animation = ""; }
+  tally();
+}
+
+function tally(){
+  const scope = document.getElementById("lesson-" + activeLessonIndex);
+  if(!scope) return;
+  const lessons = ALL_LESSON_DATA[activeBookId].lessons;
+  const total = lessons[activeLessonIndex].items.length;
+  const n = scope.querySelectorAll(".item.done").length;
+  doneEl.textContent = n;
+  totalEl.textContent = total;
+  barEl.style.width = (n / total * 100) + "%";
+  const chip = document.getElementById("chip-" + activeLessonIndex);
+  if (chip) chip.classList.toggle("seen", n === total);
+}
+
+function lessonDone(li){
+  const scope = document.getElementById("lesson-" + li);
+  if(!scope) return false;
+  return scope.querySelectorAll(".item.done").length === ALL_LESSON_DATA[activeBookId].lessons[li].items.length;
+}
+
+booksEl.addEventListener("click", e => {
+  const b = e.target.closest(".book-btn");
+  if (!b) return;
+  selectBook(b.dataset.id);
+});
+
+chaptersEl.addEventListener("click", e => {
+  const c = e.target.closest(".chap");
+  if (!c) return;
+  const lessons = ALL_LESSON_DATA[activeBookId].lessons;
+  const first = lessons.findIndex(L => chapterOf(L.id) === c.dataset.ch);
+  if (first >= 0) selectLesson(first);
+});
+
+chipsEl.addEventListener("click", e => {
+  const t = e.target.closest(".chip-l");
+  if (t) selectLesson(Number(t.dataset.l));
+});
+
+listEl.addEventListener("click", e => {
+  const btn = e.target.closest(".reveal");
+  if (!btn) return;
+  const k = btn.dataset.k;
+  setOpen(k, document.getElementById("ans-" + k).hidden);
+});
+
+document.getElementById("showAll").addEventListener("click", () => {
+  const lessons = ALL_LESSON_DATA[activeBookId].lessons;
+  lessons[activeLessonIndex].items.forEach((_, i) => setOpen(activeLessonIndex + "-" + i, true));
+});
+document.getElementById("hideAll").addEventListener("click", () => {
+  const lessons = ALL_LESSON_DATA[activeBookId].lessons;
+  lessons[activeLessonIndex].items.forEach((_, i) => setOpen(activeLessonIndex + "-" + i, false));
+});
+
+init();
+setOpen("0-0", true);
+</script>
+</body>
+</html>
