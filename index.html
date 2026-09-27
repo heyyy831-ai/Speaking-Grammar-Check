@@ -559,7 +559,7 @@ const SOURCE_LESSONS = [
     id: "2-1", group: "2", title: "疑問文・義務の助動詞・第四文型",
     themes: ["否定疑問文", "付加疑問文・選択疑問文", "shall・should・must", "mustとhave to", "第四文型（SVOO）"],
     cards: [
-      q("否定疑問文", "否定疑問文はどのような気持ちを表しますか。", "Didn't I tell you about it?\nCan't Sally drive a car?", `「言ったよね」「運転できないの？」のように、話し手の<span class="blue">予想・驚き・確認</span>を表します。`, "日本語の「はい・いいえ」ではなく、内容が肯定なら Yes、否定なら No で答えます。"),
+      q("否定疑問文", "否定疑問文はどのような気持ちを表しますか。", "Didn't I tell you about it?\nCan't Sally drive a car?", `「言ったよね」「運転できないの？」のように、話し手の<span class="blue">予想・驚き・確認</span>を表します。`, "日本語の「はい・いいえ」ではなく、内容が肯定なら Yes、否定なら No で答えます。<br>No, you didn't.「はい、話してくれませんでした」<br>Yes, she can.「いいえ、できますよ」"),
       q("付加疑問文", "付加疑問を完成させなさい。", "She is coming, (   )?\nYou don't know him, (   )?\nLet's take a walk, (   )?", `<strong>isn't she / do you / shall we</strong>`, "本文が肯定なら否定形、本文が否定なら肯定形を付けるのが基本です。"),
       q("選択疑問文", "選択疑問文を英訳し、答え方も示しなさい。", "「紅茶とコーヒーのどちらがいいですか」", `<strong>Would you like tea or coffee?</strong><br>答えは <strong>Tea, please.</strong> のように選択肢を言います。`, "Yes / No ではなく、or で示された一方を答えます。"),
       q("shall と should", "shall と should の代表的な働きを答えなさい。", "Shall I call you? / Shall we go?\nYou should see the movie.", `<strong>Shall I / we ...?</strong> は申し出・提案、<strong>should</strong> は助言・当然の予想です。`, "should は must より弱い義務・勧めを表します。"),
@@ -602,13 +602,12 @@ const SOURCE_LESSONS = [
     themes: ["第三文型からの受動態", "第四・第五文型からの受動態", "get受動態", "中間の態", "分詞の限定・叙述用法"],
     cards: [
       q("受動態の基本", "能動態を受動態にしなさい。", "Everyone knows him here.", `<strong>He is known by everyone here.</strong>`, "能動態の目的語を主語にし、be動詞＋過去分詞で「動作を受ける側」から述べます。"),
-      q("時制と受動態", "受動態の時制を完成させなさい。", "is used / was used / will be used / has been used", `<strong>be動詞</strong>が時制・数を示し、<strong>過去分詞</strong>が受け身の意味を示します。`, "助動詞の後ろは be＋過去分詞、完了形では have been＋過去分詞です。"),
       q("第四文型の受動態", "二つの目的語のどちらを主語にできるか示しなさい。", "My uncle gave me this watch.", `<strong>I was given this watch by my uncle.</strong><br><strong>This watch was given to me by my uncle.</strong>`, "give では人・物のどちらからも受動態を作れますが、動詞により制限があります。"),
       q("第五文型の受動態", "能動態を受動態にし、補語がどうなるか説明しなさい。", "They called him Ken.", `<strong>He was called Ken.</strong>`, "目的語 him が主語になり、目的格補語 Ken はそのまま主格補語として残ります。"),
       q("get受動態", "be受動態とget受動態の違いを説明しなさい。", "He was hurt. / He got hurt.", `<strong>get＋過去分詞</strong>は、出来事・変化や、しばしば本人への影響をより動的・口語的に表します。`, "get married、get dressed、get lost など定着した表現も多くあります。"),
       q("中間の態", "形は能動なのに受け身に近い意味になる文を説明しなさい。", "This book sells well.\nThese strawberries won't keep long.", `主語の性質として「この本は<span class="blue">よく売れる</span>」「この苺は<span class="green">長持ちしない</span>」と表します。`, "行為者を述べず、物の性質・しやすさに焦点を当てる中間構文です。"),
-      q("現在分詞と過去分詞", "-ing と -ed の形容詞的な意味の違いを答えなさい。", "an exciting game / excited fans\nan interesting story / interested students", `<strong>-ing</strong> は感情を引き起こす側、<strong>-ed</strong> は感情を受ける側の状態です。`, "人だから必ず -ed ではなく、役割で選びます。an interesting person も可能です。"),
-      q("分詞の叙述用法", "同じ形でも進行形・受動態・形容詞をどう見分けますか。", "Tom is studying. / Tom was asked. / Tom is interesting.", `意味と構造で判断します。<strong>is studying</strong>＝進行形、<strong>was asked</strong>＝受動態、<strong>is interesting</strong>＝形容詞が補語です。`, "be＋分詞を見ただけで機械的に決めず、主語との意味関係を確認します。")
+      q("現在分詞と過去分詞", "-ing と -ed の形容詞的な意味の違いを答えなさい。", "an exciting game / excited fans\nan interesting story / interested students", `<strong>-ing</strong> は感情を引き起こす側、<strong>-ed</strong> は感情を受ける側の状態です。<br><strong>an exciting game</strong>＝「わくわくする試合」／<strong>excited fans</strong>＝「興奮したファン」<br><strong>an interesting story</strong>＝「面白い話」／<strong>interested students</strong>＝「興味を持っている生徒たち」`, "人だから必ず -ed ではなく、役割で選びます。an interesting person も可能です。"),
+      q("分詞の叙述用法", "同じ形でも進行形・受動態・形容詞をどう見分けますか。", "Tom is studying. / Tom was asked. / Tom is interesting.", `意味と構造で判断します。<strong>is studying</strong>＝進行形、<strong>was asked</strong>＝受動態、<strong>is interesting</strong>＝形容詞が補語です。<br><strong>Tom is studying.</strong>＝「トムは勉強しています」<br><strong>Tom was asked.</strong>＝「トムは質問されました」<br><strong>Tom is interesting.</strong>＝「トムは面白い人です」`, "be＋分詞を見ただけで機械的に決めず、主語との意味関係を確認します。")
     ]
   },
   {
@@ -621,7 +620,7 @@ const SOURCE_LESSONS = [
       q("疑問詞節が主語", "日本文を英訳しなさい。", "「何を食べるかはとても重要です」", `<strong>What you eat is very important.</strong>`, "what you eat という名詞節全体が主語なので、動詞は is です。"),
       q("形式主語it", "真の主語を後ろに置く形に書き換えなさい。", "That he came back is wonderful.", `<strong>It is wonderful that he came back.</strong>`, "長い主語を後ろへ送り、文頭に形式主語 it を置くと自然です。"),
       q("原級比較", "as ... as を使って英訳しなさい。", "「彼はサリーと同じくらい速く走る」\n「彼はサリーほど速く走らない」", `<strong>He runs as fast as Sally.</strong><br><strong>He doesn't run as fast as Sally.</strong>`, "否定の not as ... as は「〜ほど…ではない」です。"),
-      q("比較級・最上級", "形を完成させなさい。", "nice / hot / easy / good / bad", `<strong>nicer–nicest / hotter–hottest / easier–easiest / better–best / worse–worst</strong>`, "短い語は -er/-est、長い語は more/most が基本ですが、不規則変化もあります。"),
+      q("比較級・最上級", "以下の形容詞の比較級、最上級を書きなさい。", "nice / hot / easy / good / bad", `<strong>nicer–nicest / hotter–hottest / easier–easiest / better–best / worse–worst</strong>`, "短い語は -er/-est、長い語は more/most が基本ですが、不規則変化もあります。"),
       q("比較表現", "日本文を英訳しなさい。", "「多ければ多いほどよい」\n「私はこの映画が一番好きです」", `<strong>The more, the better.</strong><br><strong>I like this movie best.</strong>`, "the＋比較級 ..., the＋比較級 ... で比例変化を表します。"),
       q("as well asと一致", "be動詞を選び、理由を答えなさい。", "The teacher as well as his students (is / are) here.", `<strong>is</strong>。主語の中心は The teacher で、as well as 以下は追加情報です。`, "and なら The teacher and his students are ... と複数になります。")
     ]
@@ -651,7 +650,7 @@ const SOURCE_LESSONS = [
       q("単純過去との違い", "二つの文の違いを説明しなさい。", "He worked in America for ten years.\nHe has worked in America for ten years.", `単純過去は通常「<strong>今はそこで働いていない</strong>」、現在完了は「<strong>今も働いている</strong>」という含みです。`, "現在完了は yesterday や last year など完結した過去時とは普通一緒に使いません。"),
       q("関係代名詞", "二つの文を一つにしなさい。", "I have an aunt. She plays the piano very well.", `<strong>I have an aunt who plays the piano very well.</strong>`, "who は先行詞 an aunt を受け、関係詞節の主語として働きます。"),
       q("who・which・that", "先行詞に応じて関係代名詞を選びなさい。", "the man (   ) taught me / the PC (   ) he bought / everything (   ) I know", `<strong>the man who taught me / the PC which or that he bought / everything that I know</strong>`, "人には who、物には which、どちらにも that が使えますが、用法上の制限があります。"),
-      q("限定・非限定", "コンマの有無で意味がどう変わるか説明しなさい。", "My brother who lives in Osaka is a doctor.\nMy brother, who lives in Osaka, is a doctor.", `コンマなしは兄弟の中から<span class="blue">大阪在住の兄を限定</span>。コンマありは特定済みの兄に<span class="green">追加説明</span>を加えます。`, "非限定用法では that は使えず、関係代名詞も省略できません。"),
+      q("限定・非限定", "コンマの有無で意味がどう変わるか説明しなさい。", "My brother who lives in Osaka is a doctor.\nMy brother, who lives in Osaka, is a doctor.", `コンマなしは兄弟の中から<span class="blue">大阪在住の兄を限定</span>。コンマありは特定済みの兄に<span class="green">追加説明</span>を加えます。<br><strong>My brother who lives in Osaka is a doctor.</strong>＝「大阪に住んでいる私の兄は医者です」<br><strong>My brother, who lives in Osaka, is a doctor.</strong>＝「私の兄は大阪に住んでいて、医者です」`, "非限定用法では that は使えず、関係代名詞も省略できません。"),
       q("目的格の省略", "省略できる関係代名詞を示しなさい。", "This is the PC (which / that) he bought.", `<strong>This is the PC he bought.</strong>`, "関係代名詞が関係詞節内の目的語なら省略できます。主語の関係代名詞は省略できません。")
     ]
   },
@@ -672,7 +671,7 @@ const SOURCE_LESSONS = [
     id: "1-7", group: "1", title: "前置詞・所有代名詞・感嘆詞",
     themes: ["with・about・after・over", "at・on・inの比較", "所有代名詞", "感嘆詞", "注意すべき名詞"],
     cards: [
-      q("with", "with の代表的な意味を三つ挙げなさい。", "with my friend / cut it with a knife / a girl with blue eyes", `<strong>同伴</strong>「〜と」、<strong>手段</strong>「〜を使って」、<strong>付帯・所有</strong>「〜のある」を表します。`, "文脈によって「〜に対して」「〜のことで」などにも広がります。"),
+      q("with", "with の代表的な意味を三つ挙げなさい。", "with my friend / cut it with a knife / a girl with blue eyes", `<strong>同伴</strong>「〜と」、<strong>手段</strong>「〜を使って」、<strong>付帯・所有</strong>「〜のある」を表します。`, ""),
       q("about・after・over", "各前置詞の中心的な意味を答えなさい。", "talk about the plan / after lunch / over the hill", `<strong>about</strong>＝〜について、<strong>after</strong>＝〜の後、<strong>over</strong>＝〜を越えて・〜より多く、です。`, "over coffee のように「〜をしながら」という用法もあります。"),
       q("at・on・in", "住所・通り・都市に使う前置詞を入れなさい。", "(   ) 123 Fifth Street / (   ) Fifth Street / (   ) Chicago", `<strong>at 123 Fifth Street / on Fifth Street / in Chicago</strong>`, "点としての番地は at、線としての通りは on、広がりのある都市は in です。"),
       q("時のat・on・in", "時を表す前置詞を入れなさい。", "(   ) 8:00 / (   ) Sunday / (   ) summer", `<strong>at 8:00 / on Sunday / in summer</strong>`, "時刻＝at、曜日・日付＝on、月・季節・年＝in が基本です。"),
@@ -700,7 +699,7 @@ const SOURCE_LESSONS = [
     themes: ["be動詞の過去形", "itの用法", "名詞の同格", "副詞句の順序", "tooの注意"],
     cards: [
       q("be動詞の過去", "主語に合うbe動詞の過去形を入れなさい。", "I / he / she / it → ?\nyou / we / they → ?", `<strong>I・he・she・it was</strong><br><strong>you・we・they were</strong>`, "否定は was not / were not、疑問は Was / Were を主語の前に置きます。"),
-      q("過去の疑問と短答", "疑問文と短い答えを完成させなさい。", "彼は野球部でしたか。—はい／いいえ。", `<strong>Was he on the baseball team?</strong><br><strong>Yes, he was. / No, he wasn't.</strong>`, "on the team は「チームに所属して」です。"),
+      q("過去の疑問と短答", "疑問文と短い答えを完成させなさい。", "彼は野球チームにいましたか。—はい／いいえ。", `<strong>Was he on the baseball team?</strong><br><strong>Yes, he was. / No, he wasn't.</strong>`, "on the team は「チームに所属して」です。"),
       q("天候・明暗のit", "天候や周囲の状況を表す文を英訳しなさい。", "「昨日は雨でしたか」\n「外は明るいよ」", `<strong>Was it rainy yesterday?</strong><br><strong>It is light outside.</strong>`, "この it は具体的な名詞を指さない非人称の it です。"),
       q("時間・距離のit", "時間や距離を表す文を完成させなさい。", "(   ) takes one hour from here to school.\n(   ) is two kilometers to the station.", `<strong>It takes</strong> one hour ...<br><strong>It is</strong> two kilometers ...`, "時間・距離をひとまとめにして形式的な主語 it を置きます。"),
       q("名詞の同格", "名詞の同格とは何か、例で説明しなさい。", "Mr. Smith, our English teacher, is from Canada.", `<strong>our English teacher</strong> が Mr. Smith を別の名詞表現で説明しています。`, "二つの名詞表現が同じ人・物を指す関係を同格といいます。"),
@@ -730,7 +729,7 @@ const SOURCE_LESSONS = [
       q("might", "might は may と比べてどのような響きを加えますか。", "It might rain tonight.", `may より<span class="blue">控えめ・不確か</span>な可能性を表しやすく、丁寧で遠回しな響きにもなります。`, "必ずしも過去を表すわけではありません。"),
       q("will", "will の代表的な働きを三つ答えなさい。", "I'll help you. / It will rain. / He will often sit there for hours.", `<strong>その場の意志</strong>、<strong>予測</strong>、<strong>習慣・性質</strong>を表します。`, "単なる「未来の印」ではなく、話し手の判断や意志を含みます。"),
       q("would", "would の代表的な使い方を説明しなさい。", "Would you help me? / I would often visit her.", `<strong>丁寧な依頼・意向</strong>や、過去の<span class="blue">反復的な習慣</span>を表します。`, "文脈によって仮定的な結果や、過去から見た未来も表します。"),
-      q("未来表現", "次の四つの未来表現が得意とする意味を答えなさい。", "The train leaves at six.\nI'm going to study.\nI'm meeting Ken tonight.\nI'll answer the phone.", `<strong>現在形</strong>＝時刻表など固定予定、<strong>be going to</strong>＝事前の意図・根拠ある予測、<strong>進行形</strong>＝手配済み予定、<strong>will</strong>＝その場の意志・予測です。`, "未来の捉え方に応じて形を選びます。"),
+      q("未来表現", "次の四つの未来表現の意味を答えなさい。", "The train leaves at six.\nI'm going to study.\nI'm meeting Ken tonight.\nI'll answer the phone.", `<strong>現在形</strong>＝時刻表など固定予定、<strong>be going to</strong>＝事前の意図・根拠ある予測、<strong>進行形</strong>＝手配済み予定、<strong>will</strong>＝その場の意志・予測です。`, "未来の捉え方に応じて形を選びます。"),
       q("going to と will", "ニュアンスの違いが出るように訳し分けなさい。", "He is going to get better.\nHe will get better.", `第1文は兆候から「<strong>よくなりそうだ</strong>」、第2文は話し手の判断で「<strong>よくなるだろう</strong>」です。`, "目の前の根拠がある予測には be going to がよく使われます。"),
       q("再帰代名詞", "主語に合う再帰代名詞を答えなさい。", "I / you / he / she / we / they", `<strong>myself / yourself / himself / herself / ourselves / themselves</strong>`, "主語と目的語が同じ人なら、目的語に再帰代名詞を使います。"),
       q("再帰代名詞の表現", "日本文を英訳しなさい。", "「楽しんでください」\n「ご自由にケーキをどうぞ」", `<strong>Enjoy yourself / yourselves.</strong><br><strong>Help yourself / yourselves to some cake.</strong>`, "相手が一人なら yourself、複数なら yourselves です。")
@@ -753,8 +752,8 @@ const SOURCE_LESSONS = [
     id: "1-2", group: "1", title: "一般動詞と命令形",
     themes: ["一般動詞", "目的語を取らない動詞", "目的語を一つ取る動詞", "命令形"],
     cards: [
-      q("一般動詞", "be動詞以外の動詞を何と呼びますか。また一般動詞は目的語をいくつ取りますか。", "walk / like / give", `<span class="blue">一般動詞</span>と呼び、目的語を <strong>0〜2個</strong>取ります。`, "walk は0個、like は1個、give は2個取れます。"),
-      q("状態と動作", "同じ has でも、次の2文では状態と動作のどちらですか。", "He has a pet.\nHe has breakfast every morning.", `第1文は「所有」の<span class="blue">状態</span>、第2文は「食べる」という<span class="green">動作</span>です。`, "進行形にできるかどうかを考える助けになります。"),
+      q("一般動詞", "be動詞以外の動詞を何と呼びますか。また一般動詞は目的語をいくつ取りますか。", "", `<span class="blue">一般動詞</span>と呼び、目的語を <strong>0〜2個</strong>取ります。<br><br><strong>We walk to school.</strong>「私たちは歩いて学校に行きます」<br><strong>I like <span class="green">your food</span>.</strong>「私はあなたの料理が好きです」<br><strong>He gave <span class="green">Sally</span> <span class="green">the money</span>.</strong>「彼はそのお金をサリーにあげました」`, "walk は0個、like は1個、give は2個取れます。"),
+      q("状態と動作", "同じ has でも、次の2文では状態と動作のどちらですか。", "He has a pet.\nHe has breakfast every morning.", `第1文は「所有」の<span class="blue">状態</span>、第2文は「食べる」という<span class="green">動作</span>です。`, "進行形に出来やすいのが動作動詞です。"),
       q("三人称単数現在", "三人称単数現在の形を完成させなさい。", "play → ? / teach → ? / go → ? / study → ?", `<strong>plays / teaches / goes / studies</strong>`, "原則 -s、-s・-sh・-ch・-o の後は -es、子音字＋y は y を i にして -es です。"),
       q("目的語なし", "日本文を英訳し、動詞の後ろに目的語がないことを確認しなさい。", "「私たちは歩いて学校に行っています」\n「彼はよく私の家に来ます」", `<strong>We walk to school.</strong><br><strong>He often comes to my house.</strong>`, "to school / to my house は目的語ではなく、場所・方向を表す前置詞句です。"),
       q("目的語一つ", "次の文で動詞と目的語を示しなさい。", "She studies English every day.\nI like this song.", `動詞と目的語は <strong>studies＋English</strong>、<strong>like＋this song</strong> です。`, "目的語は動作が直接向かう相手・物・事柄です。"),
@@ -781,7 +780,7 @@ const SOURCE_LESSONS = [
     id: "1-4", group: "1", title: "疑問代名詞・代名詞・名詞",
     themes: ["who・what・which", "目的格・所有代名詞", "固有名詞", "抽象名詞", "場所とthe", "前置詞の基本"],
     cards: [
-      q("疑問代名詞", "who・what・which は、それぞれ何を尋ねる疑問代名詞ですか。", "Who is she? / What is this? / Which is yours?", `<strong>who</strong>＝人、<strong>what</strong>＝物・事柄、<strong>which</strong>＝限られた選択肢のどれ、を尋ねます。`, "疑問詞自体が主語なら do / does は使いません。"),
+      q("疑問代名詞", "who・what・which は、それぞれ何を尋ねる疑問代名詞ですか。", "Who is she? / What is this? / Which is yours?", `<strong>who</strong>＝人、<strong>what</strong>＝物・事柄、<strong>which</strong>＝限られた選択肢のどれ、を尋ねます。`, ""),
       q("疑問詞が主語", "語を並べ替えて正しい疑問文にしなさい。", "in your bag / is / what\nnext / comes / what", `<strong>What is in your bag?</strong><br><strong>What comes next?</strong>`, "what が主語なので、肯定文と同じ語順です。"),
       q("疑問詞が目的語", "語を並べ替えて正しい疑問文にしなさい。", "you / what / have / do\nyou / who / like / do", `<strong>What do you have?</strong><br><strong>Who do you like?</strong>`, "疑問詞が目的語なら do＋主語＋動詞の語順になります。口語では whom より who が普通です。"),
       q("目的格と所有代名詞", "空所を適切な代名詞で補いなさい。", "She knows (I). / This bag is (she). / That car is (we).", `<strong>She knows me. / This bag is hers. / That car is ours.</strong>`, "me は目的格。hers、ours は後ろに名詞を置かない所有代名詞です。"),
@@ -808,12 +807,12 @@ const SOURCE_LESSONS = [
     id: "3-1", group: "3", title: "時制の比較と疑問文の注意",
     themes: ["現在形と現在進行形", "過去形と現在完了形", "過去形と過去進行形", "時制の注意", "疑問文", "疑問詞＋不定詞"],
     cards: [
-      q("現在形と進行形", "二つの時制が表す状況の違いを説明しなさい。", "She works at a bank.\nShe is working at a bank this month.", `現在形は<span class="blue">習慣・恒常的な事実</span>、現在進行形は<span class="green">今だけの一時的な状況</span>です。`, "always などと進行形を組み合わせると、繰り返しへの感情を示すこともあります。"),
+      q("現在形と進行形", "二つの時制が表す状況の違いを説明しなさい。", "She works at a bank.\nShe is working at a bank this month.", `現在形は<span class="blue">習慣・恒常的な事実</span>、現在進行形は<span class="green">今だけの一時的な状況</span>です。`, ""),
       q("過去と現在完了", "this morning と現在完了・過去形の関係を説明しなさい。", "I haven't seen Dr. Smith this morning.\nI didn't see Dr. Smith this morning.", `現在完了は<span class="blue">まだ午前中</span>、過去形は午前中を<span class="green">終わった時間</span>として捉えるのが普通です。`, "話している時点と時間区分の関係で時制が変わります。"),
       q("過去形と過去進行形", "二つの出来事を自然な時制で結びなさい。", "I (study) when he (call) me.", `<strong>I was studying when he called me.</strong>`, "背景として進行中の動作は過去進行形、そこへ起きた短い出来事は単純過去にします。"),
       q("状態動詞と時制", "know・believe・belong などを普通進行形にしない理由を答えなさい。", "I know the answer. / This belongs to me.", `動作の進行ではなく<span class="blue">状態</span>を表すため、普通は単純形を使います。`, "意味が一時的な動作へ変われば I'm thinking about it. のように進行形も可能です。"),
-      q("伝聞表現", "聞いた情報を伝える三つの形を示しなさい。", "「あなたは料理が上手だと聞いています」", `<strong>I hear / I've heard / I was told that you are good at cooking.</strong>`, "hear は現在得ている情報、I've heard はこれまでに聞いたこと、was told は誰かから伝えられたことに焦点があります。"),
-      q("否定疑問への答え", "否定疑問への Yes / No の基準を説明しなさい。", "Aren't we going to the park?", `実際に行くなら <strong>Yes, we are.</strong>、行かないなら <strong>No, we aren't.</strong> です。`, "英語では質問の肯定・否定ではなく、答える内容の事実に合わせます。"),
+      q("伝聞表現", "聞いた情報を伝える三つの形を示しなさい。", "「あなたは料理が上手だと聞いています」", `<strong>I hear / I've heard / I heard</strong>`, "伝聞動詞は基本この３種類が実質同じ意味で使える。"),
+      q("否定疑問への答え", "否定疑問への Yes / No の基準を説明しなさい。", "Aren't we going to the park?", `実際に行くなら <strong>Yes, we are.</strong>「いいえ、いく予定です」、行かないなら <strong>No, we aren't.</strong>「はい、いく予定ではありません」です。`, "英語では質問の肯定・否定ではなく、答える内容の事実に合わせます。"),
       q("付加疑問への答え", "文を完成させ、答え方を確認しなさい。", "She's coming over for dinner, (   )? — Yes, (   ).", `<strong>isn't she? — Yes, she is.</strong>`, "付加疑問でも、来るなら Yes、来ないなら No です。"),
       q("疑問詞＋不定詞", "次の意味を英語で表しなさい。", "何をすべきか / どこへ行くべきか / どう使うか", `<strong>what to do / where to go / how to use it</strong>`, "疑問詞＋to不定詞は「〜すべきか／〜したらよいか」を簡潔に表します。")
     ]
@@ -898,7 +897,7 @@ const GREETING_LESSON = {
   id: "0-2", group: "0", title: "あいさつ表現など",
   themes: ["Hello. / Hi.", "How are you?", "Good morning.", "Good afternoon.", "Good evening.", "Good night.", "Goodbye.", "Thank you.", "Nice to meet you.", "Nice to see you."],
   cards: [
-    q("Hello. / Hi.", "Hello. / Hi. は、日本語の「こんにちは」とどのように違いますか。", "朝・昼・晩／電話／家族や同居人／人のいない店内", `<strong>Hello. / Hi.</strong> は24時間使え、「おはよう」「こんにちは」「こんばんは」「やあ」のほか、電話の「もしもし」にもなります。`, "家族や同居人にも使え、人のいない店や家で呼びかけるときは Hello? と語尾を上げます。"),
+    q("Hello. / Hi.", "Hello. / Hi. は、日本語の「こんにちは」とどのように違いますか。", "", `<strong>Hello. / Hi.</strong> は24時間使え、「おはよう」「こんにちは」「こんばんは」「やあ」のほか、電話の「もしもし」にもなります。`, "家族や同居人にも使え、人のいない店や家で呼びかけるときは Hello? と語尾を上げます。"),
     q("Hello. / Hi.", "状況に合う英語を答えなさい。", "「やあ、トム！」\n「（電話に出て）もしもし」\n「すみませ〜ん。どなたかいませんか」", `<strong>Hi, Tom!</strong><br><strong>Hello. / Hi.</strong><br><strong>Hello?</strong>`, "短い Hi. は Hello. よりくだけた表現です。電話の応答と呼びかけではイントネーションも重要です。"),
     q("How are you?", "How are you? と日本語の「お元気ですか」の使い方の違いを説明しなさい。", "Hi! How are you?", `<strong>How are you?</strong> は毎日会う相手にも使える、習慣化したあいさつです。`, "必ずしも本当に健康状態を詳しく尋ねているわけではなく、Hi. に続く定型表現としてよく使われます。"),
     q("How are you?", "How are you? への自然な短い返答を四つ挙げなさい。", "Fine. / Pretty good. / Great! / OK.", `<strong>Fine, thank you. / Pretty good. / Great! / OK.</strong><br>ほかに <strong>Not so bad.</strong> も使えます。`, "長い説明をせず、まず短く答えて会話へ入るのが普通です。"),
@@ -907,7 +906,7 @@ const GREETING_LESSON = {
     q("Good evening.", "Good evening. が使われる場面と、evening の時間帯を答えなさい。", "Good evening. Please come in!", `クラスや会合の始めなど<span class="blue">フォーマルな場面</span>で使われます。evening は日没から就寝時までです。`, "Good evening. は会ったときのあいさつで、別れ際には普通 Good night. を使います。"),
     q("Good night.", "Good night. の二つの意味を答えなさい。", "Good night. — Good night.\nGood night! — Same to you!", `「<strong>おやすみ</strong>」と、別れ際の「<strong>よい夜をお過ごしください</strong>」です。`, "night は外が暗い時間帯、day は明るい時間帯です。morning / afternoon / evening とは別の二分法です。"),
     q("Goodbye.", "Goodbye. は日本語の「さよなら」とどのように違いますか。", "Goodbye. — Bye.", `家族や同居人にも使え、<span class="blue">短い外出</span>でいったん別れる場合にも使えます。`, "日本語の「さよなら」ほど、長期間会わないという含みは必要ありません。Bye. はよりカジュアルです。"),
-    q("Thank you.", "英語圏で Thank you. が必要になる代表的な場面を挙げなさい。", "ドアを開けてもらう／レジで応対される／飲み物を注いでもらう", `小さな手助けやサービスにも声に出して <strong>Thank you.</strong> と伝えます。レジ係から Thank you. と言われた側も <strong>Thank you.</strong> と返すのが一般的です。`, "自分が先にドアへ着き、後ろに人がいる場合は、ドアを押さえて先に通すことも重要なエチケットです。"),
+    q("Thank you.", "英語圏で Thank you. が必要になる代表的な場面を挙げなさい。", "", `小さな手助けやサービスにも声に出して <strong>Thank you.</strong> と伝えます。レジ係から Thank you. と言われた側も <strong>Thank you.</strong> と返すのが一般的です。`, "自分が先にドアへ着き、後ろに人がいる場合は、ドアを押さえて先に通すことも重要なエチケットです。"),
     q("Thank you.", "感謝と「どういたしまして」の表現を答えなさい。", "ありがとう。—どういたしまして。", `<strong>Thank you. / Thanks. / Thanks a lot.</strong><br><strong>Sure. / No problem.</strong>`, "You're welcome. も可能ですが、日常会話では Sure. や No problem. がよく使われます。"),
     q("Nice to meet you.", "初対面のあいさつと返答を答え、握手の注意点も説明しなさい。", "「はじめまして」—「はじめまして」", `<strong>Nice to meet you. — Nice to meet you, too.</strong>`, "握手は、特に男性同士ではしっかり握るのが一般的です。弱すぎる握手は消極的な印象を与えることがあります。"),
     q("Nice to see you.", "Nice to meet you. と Nice to see you. の違いを答えなさい。", "Nice to see you again. — You, too.", `<strong>Nice to meet you.</strong> は主に初対面、<strong>Nice to see you.</strong> は以前会った人との再会に使います。`, "「またお会いできてうれしいです」への短い返答は You, too. です。")
@@ -982,7 +981,7 @@ const LESSON4_LESSONS = [
       q("enough to・too to", "二つの構文の意味を答えなさい。", "old enough to drive / too young to drive", `<strong>enough to</strong>＝運転するのに十分な年齢、<strong>too ... to</strong>＝運転するには若すぎる、です。`, "enough は形容詞・副詞の後ろ、名詞を修飾するときは enough money のように前に置きます。"),
       q("原形不定詞の慣用表現", "空所に動詞の原形を入れ、意味を答えなさい。", "You'd better (leave). / Why not (try)? / She did nothing but (watch) TV.", `<strong>leave / try / watch</strong>。had better＝〜した方がよい、Why not＝〜したらどう、do nothing but＝〜ばかりする、です。`, "否定は had better not＋原形です。"),
       q("動名詞の慣用表現", "日本文に合う表現を選びなさい。", "「言っても無駄だ」／「笑わずにはいられない」／「外食したい気分だ」", `<strong>It's no use saying it.</strong><br><strong>I can't help laughing.</strong><br><strong>I feel like eating out.</strong>`, "no use doing、can't help doing、feel like doing は動名詞を使う代表的な慣用表現です。"),
-      q("Would you mind ...?", "依頼を英訳し、承諾するときの答えも示しなさい。", "「窓を閉めていただけますか」", `<strong>Would you mind closing the window?</strong><br>承諾は <strong>Not at all. / No, of course not.</strong>`, "mind は「気にする」なので、No は「気にしません＝いいですよ」。Yes だけでは断る意味に聞こえます。"),
+      q("Would you mind ...?", "依頼をmindを使って英訳し、承諾するときの答えも示しなさい。", "「窓を閉めていただけますか」", `<strong>Would you mind closing the window?</strong><br>承諾は <strong>Not at all. / No, of course not.</strong>`, "mind は「気にする」なので、No は「気にしません＝いいですよ」。Yes だけでは断る意味に聞こえます。"),
       q("動名詞の意味上の主語", "my を使う理由を説明しなさい。", "Do you mind my smoking here?", `<strong>my</strong> は動名詞 smoking の意味上の主語です。出来事「私がここで吸うこと」全体を一まとまりにします。`, "会話では me smoking も使われますが、正式には所有格が基本です。"),
       q("冠詞のまとめ", "冠詞の使い方を三点説明しなさい。", "too good a bargain / a second opinion / by train / play the piano", `<strong>too＋形容詞＋a＋名詞</strong>の語順、<strong>a＋序数</strong>で「もう一つ」、交通手段の <strong>by＋無冠詞</strong>、楽器には通常 <strong>the</strong> を使います。`, "the は身近な制度・交通機関・通信手段にも使われますが、TV やスポーツ名など例外もあります。")
     ]
@@ -993,7 +992,7 @@ const LESSON4_LESSONS = [
     cards: [
       q("命令形＋and / or", "and と or が表す関係を説明しなさい。", "Study hard, and you'll improve.\nHurry up, or you'll miss the train.", `<strong>命令形＋and</strong> は「そうすれば」、<strong>命令形＋or</strong> は「さもないと」を表します。`, "前半を条件、後半をその結果として読む構文です。"),
       q("let", "一人称・三人称への働きかけを英訳しなさい。", "「私に見せて」／「散歩しよう」／「彼女に使わせて」", `<strong>Let me see it.</strong><br><strong>Let's take a walk.</strong><br><strong>Let her use it.</strong>`, "Let's の否定は Let's not＋原形が標準的です。"),
-      q("let の慣用表現", "意味を答えなさい。", "Let me see. / Let's say ... / let alone / Let's face it.", `<strong>Let me see.</strong>＝ええと、<strong>Let's say</strong>＝例えば〜としよう、<strong>let alone</strong>＝まして〜は、<strong>Let's face it.</strong>＝現実を直視しよう、です。`, "文字どおりの「〜させる」から離れた会話表現も多くあります。"),
+      q("let の慣用表現", "意味を答えなさい。", "Let me see. / Let's say ... / I can't buy a car, let alone a house. / Let's face it.", `<strong>Let me see.</strong>＝ええと、<strong>Let's say</strong>＝例えば〜としよう、<strong>let alone</strong>＝まして〜は、<strong>Let's face it.</strong>＝現実を直視しよう、です。`, "文字どおりの「〜させる」から離れた会話表現も多くあります。"),
       q("命令文の社会的機能", "各文が命令以外にどんな機能を持つか答えなさい。", "Have another piece. / Watch out! / Come in. / Have a nice weekend!", `<strong>勧め</strong>、<strong>警告</strong>、<strong>招待</strong>、<strong>願い・別れのあいさつ</strong>です。`, "命令形は依頼・助言・手順・道案内などにも広く使われます。"),
       q("no one と none", "二つの違いを説明しなさい。", "No one knew the answer. / None of the money was recovered.", `<strong>no one</strong> は「誰も〜ない」で人を指し、<strong>none</strong> は「どれも／何も〜ない」で of句を伴えます。`, "none of＋不可算名詞は単数扱い、複数名詞では文脈により単数・複数の一致が見られます。"),
       q("相関表現", "三つの相関表現を完成させなさい。", "AもBも〜ない / AかBのどちらか / AもBも", `<strong>neither A nor B</strong><br><strong>either A or B</strong><br><strong>both A and B</strong>`, "AとBには同じ文法的な形をそろえます。"),
@@ -1014,7 +1013,7 @@ const LESSON4_LESSONS = [
       q("独立した不定詞句", "文全体を修飾する慣用句の意味を答えなさい。", "Needless to say / To begin with / To tell the truth / Strange to say", `<strong>言うまでもなく</strong>／<strong>まず第一に</strong>／<strong>本当を言えば</strong>／<strong>奇妙なことに</strong>です。`, "主文の一要素ではなく、話し手のコメントとして文全体を修飾します。"),
       q("中間の態", "受動態を使わずに、物の性質として英訳しなさい。", "「この桃は簡単に皮がむける」／「このPCは扱いやすい」", `<strong>This peach peels easily.</strong><br><strong>This PC handles easily.</strong>`, "形は能動でも、主語が動作を受ける物になり、「〜しやすい／〜できる」という性質を表します。"),
       q("-ing / -ed形容詞", "正しい語を選び、理由を説明しなさい。", "I am (boring / bored).\nThe lecture is (boring / bored).", `<strong>I am bored.</strong><br><strong>The lecture is boring.</strong>`, "-ed は感情を経験する側、-ing はその感情を引き起こす側を表します。"),
-      q("理由を表す前置詞句", "owing to・because of・due to を使って一文ずつ作りなさい。", "雨で試合が中止／事情で落ち込む／病気で働けない", `<strong>The game was canceled owing to the rain.</strong><br><strong>You may feel down because of the situation.</strong><br><strong>She cannot work due to her illness.</strong>`, "いずれも後ろには名詞句を置きます。due to は be動詞の補語としてもよく使われます。"),
+      q("理由を表す前置詞句", "owing to・because of・due to を使って一文ずつ作りなさい。", "雨で試合が中止／事情で落ち込む／病気で働けない", `<strong>The game was canceled owing to the rain.</strong><br><strong>You may feel down because of the situation.</strong><br><strong>She cannot work due to her illness.</strong>`, "いずれも後ろには名詞句を置きます。"),
       q("譲歩・代替の前置詞句", "意味を答えなさい。", "in spite of / despite / instead of", `<strong>in spite of / despite</strong>＝〜にもかかわらず、<strong>instead of</strong>＝〜の代わりに・〜しないで、です。`, "後ろに動詞を置くときは、in spite of feeling ... / instead of going ... のように動名詞にします。"),
       q("except・besides・according to・thanks to", "四つの表現の違いを答えなさい。", "except / besides / according to / thanks to", `<strong>except</strong>＝〜を除いて、<strong>besides</strong>＝〜に加えて、<strong>according to</strong>＝〜によれば・応じて、<strong>thanks to</strong>＝〜のおかげで、です。`, "except for は「〜を別にすれば」と、全体への例外を示すときによく使います。")
     ]
@@ -1023,7 +1022,7 @@ const LESSON4_LESSONS = [
     id: "4-7", group: "4", title: "否定・倒置・受動態・形容詞",
     themes: ["全否定・部分否定・準否定", "倒置", "受動態の進行形", "英語特有の受動表現", "分詞由来・複合形容詞"],
     cards: [
-      q("全否定と部分否定", "意味の違いを説明しなさい。", "All people do not agree. / No people agree.", `前者は通常「<strong>全員が同意するわけではない</strong>」という部分否定、後者は「<strong>誰も同意しない</strong>」という全否定です。`, "not all / not both / not completely などは「すべて・両方・完全にというわけではない」を表します。"),
+      q("全否定と部分否定", "意味の違いを説明しなさい。", "All people do not agree. / No people agree.", `前者は通常「全員が同意するわけではない」という部分否定（全否定の可能性もある）、後者は「誰も同意しない」という全否定です。`, "not all / not both / not completely などは「すべて・両方・完全にというわけではない」を表します。"),
       q("準否定", "否定語 not を使わずに弱い否定を表す語を挙げなさい。", "few / little / seldom / rarely / hardly", `<strong>few</strong>＝ほとんどない、<strong>little</strong>＝ほとんどない、<strong>seldom / rarely</strong>＝めったに〜ない、<strong>hardly</strong>＝ほとんど〜ない、です。`, "a few / a little は「少しはある」という肯定的な意味になります。"),
       q("否定語による倒置", "通常の語順から倒置にしなさい。", "I have never gone this far.", `<strong>Never have I gone this far.</strong>`, "否定語・準否定語・only を文頭に出すと、助動詞＋主語＋本動詞の疑問文に似た語順になります。"),
       q("ifを省略した倒置", "if節のある形に戻しなさい。", "Were I you, ...\nShould you arrive early, ...\nHad he taken more time, ...", `<strong>If I were you</strong>、<strong>If you should arrive early</strong>、<strong>If he had taken more time</strong> です。`, "were・should・had のある条件節では、if を省き、助動詞を主語の前へ出せます。"),
@@ -1041,7 +1040,6 @@ const LESSON4_LESSONS = [
       q("形容詞＋不定詞／動名詞", "ほぼ同じ内容を二つの形で表しなさい。", "「彼女は彼にお金を頼むのを恥じた」", `<strong>She was ashamed to ask him for money.</strong><br><strong>She was ashamed of asking him for money.</strong>`, "afraid、ashamed、fortunate、quick、slow などは、不定詞と前置詞＋動名詞の両方を取ることがあります。"),
       q("強める副詞", "形容詞を強める副詞を挙げ、自然な組み合わせを作りなさい。", "pretty / awfully / amazingly / deeply / highly / extremely / totally", `<strong>pretty interesting / awfully sorry / amazingly big / deeply concerned / highly intelligent / extremely dangerous / totally natural</strong>`, "同じ「とても」でも、形容詞との相性や改まり度が異なります。"),
       q("弱める副詞", "弱める副詞のニュアンスを答えなさい。", "a bit / somewhat / rather / nearly / relatively", `<strong>a bit</strong>＝少し、<strong>somewhat</strong>＝いくぶん、<strong>rather</strong>＝やや、<strong>nearly</strong>＝ほとんど、<strong>relatively</strong>＝比較的、です。`, "評価を断定しすぎず、程度を細かく調整します。"),
-      q("副詞＋副詞", "前の副詞が後ろを強めている組み合わせを示しなさい。", "right now / right here / pretty much / pretty soon / really well", `<strong>right</strong> が now / here を、<strong>pretty</strong> が much / soon を、<strong>really</strong> が well を強めています。`, "副詞は動詞・形容詞だけでなく、ほかの副詞も修飾します。"),
       q("文全体をつなぐ副詞句", "意味を答えなさい。", "In general / In my view / In short / In fact / In other words", `<strong>一般に</strong>／<strong>私の考えでは</strong>／<strong>要するに</strong>／<strong>実は</strong>／<strong>言い換えれば</strong>です。`, "発言の立場・要約・補足・言い換えを示し、会話や文章の流れを作ります。"),
       q("What if ...?", "意味を答え、英訳しなさい。", "What if he fails? / 「雨が降ったらどうする？」", `<strong>What if he fails?</strong>＝彼が失敗したらどうする？<br><strong>What if it rains?</strong>`, "What will happen if ...? を短くした会話的な表現です。"),
       q("会話を始める疑問詞表現", "二つの表現の主な使い方を答えなさい。", "I'll tell you what. / You know what?", `<strong>I'll tell you what.</strong> は提案を切り出す「あのね／こうしよう」、<strong>You know what?</strong> は話題を始める「ねえ、聞いて」です。`, "語を直訳するより、会話の機能として覚えると自然です。"),
@@ -1210,7 +1208,7 @@ function renderCards(lesson) {
             <p class="answer-heading">ANSWER</p>
             <div class="answer-body">
               <p class="answer-main">${card.answer}</p>
-              <p class="answer-note">${card.note}</p>
+              ${card.note ? `<p class="answer-note">${card.note}</p>` : ""}
             </div>
             <button type="button" class="answer-reveal" data-action="reveal" aria-controls="${answerId}">答えを見る</button>
           </div>
